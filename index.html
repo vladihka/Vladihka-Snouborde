@@ -2,9 +2,22 @@
 <html lang="en">
 
 <head>
-	<title>Snoubord</title>
-	<meta name="viewport" content="width=device-width">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Mountains Snowboarding - Premium Snowboards & Equipment</title>
+	<meta name="title" content="Mountains Snowboarding - Premium Snowboards & Equipment">
+	<meta name="description" content="Discover premium snowboards, gear, and accessories. Join the Mountains Snowboarding community for the ultimate winter sports experience.">
+	<meta name="keywords" content="snowboards, snowboarding, winter sports, mountains, equipment, gear">
+	<meta name="author" content="Mountains Snowboarding">
+	<meta name="robots" content="index, follow">
+	
+	<link rel="icon" type="image/png" href="img/header/logo.png">
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
@@ -16,87 +29,111 @@
 						<div class="header__row">
 							<div class="header__left">
 								<div class="header__logo">
-									<a href="">
-										<img src="img/header/logo.png" alt="">
+									<a href="#home" aria-label="Mountains Snowboarding Home">
+										<img src="img/header/logo.png" alt="Mountains Snowboarding Logo" width="120" height="40" loading="eager">
 									</a>
 								</div>
-								<nav class="header__menu">
+								<nav class="header__menu" role="navigation" aria-label="Main navigation">
 									<ul class="header__list">
-										<li><a href="" class="header__link">SHOP</a></li>
-										<li><a href="" class="header__link">TEAM</a></li>
-										<li><a href="" class="header__link">EVENTS</a></li>
-										<li><a href="" class="header__link">EXPERIENCE</a></li>
-										<li><a href="" class="header__link">COMPANY</a></li>
-										<li><a href="" class="header__link">Contact</a></li>
+										<li><a href="#shop" class="header__link">SHOP</a></li>
+										<li><a href="#team" class="header__link">TEAM</a></li>
+										<li><a href="#events" class="header__link">EVENTS</a></li>
+										<li><a href="#experience" class="header__link">EXPERIENCE</a></li>
+										<li><a href="#company" class="header__link">COMPANY</a></li>
+										<li><a href="#contact" class="header__link">Contact</a></li>
 									</ul>
 								</nav>
 							</div>
 							<div class="header__right">
-								<div class="header__search">
-									<img src="img/header/search1.png" alt="">
-								</div>
-								<div class="header__shop">
+								<button class="header__search" type="button" aria-label="Search" aria-expanded="false">
+									<img src="img/header/search1.png" alt="" width="20" height="20" aria-hidden="true">
+								</button>
+								<div class="header__shop" role="button" tabindex="0" aria-label="Shopping cart">
 									<div class="header__cost">
-										<img src="img/header/shop.png" alt="">
+										<img src="img/header/shop.png" alt="" width="20" height="20" aria-hidden="true">
 									</div>
-									<div class="header__price">€0</div>
+									<div class="header__price" aria-live="polite">€0</div>
 								</div>
-								<div class="header__burger">
-									<span></span>
-								</div>
+								<button class="header__burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">
+									<span aria-hidden="true"></span>
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="header__bottom">
-					<div class="fullscreen">
+					<section class="fullscreen" id="home">
 						<div class="fullscreen__body">
-							<div class="fullscreen__text">Run Over Everything</div>
+							<h1 class="fullscreen__text">Run Over Everything</h1>
 							<div class="fullscreen__button">
-								<button>See Details</button>
+								<button type="button" class="btn-primary" aria-label="See snowboard details">See Details</button>
 							</div>
 						</div>
-					</div>
+					</section>
 				</div>
 			</div>
 		</header>
-		<div class="content">
-			<div class="snoubords">
+		<main class="content" role="main">
+			<section class="snoubords" id="shop" aria-labelledby="snowboards-title">
 				<div class="container">
-					<div class="snoubords__title title">
-						<div class="title__title">snowboards</div>
-						<div class="title__text">Aliquam erat volutpat. Curabitur ut consequat arcu eget laoreet est</div>
+					<header class="snoubords__title title">
+						<h2 class="title__title" id="snowboards-title">snowboards</h2>
+						<p class="title__text">Aliquam erat volutpat. Curabitur ut consequat arcu eget laoreet est</p>
 						<div class="title__img">
-							<img src="img/snoubord/icon.png" alt="">
+							<img src="img/snoubord/icon.png" alt="" width="50" height="50" aria-hidden="true">
 						</div>
-					</div>
-					<div class="snoubords__row">
-						<div class="snoubord-slider__body">
-							<div class="snoubord-slider__img">
-								<img src="img/snoubord/01.png" alt="">
+					</header>
+					<div class="snoubords__grid" role="region" aria-label="Snowboards collection">
+						<article class="snoubord-card">
+							<div class="snoubord-card__img">
+								<img src="img/snoubord/01.png" alt="Snowboard Extreme Series - Professional grade snowboard" width="300" height="400" loading="lazy">
 							</div>
-							<div class="snoubord-slider__text">Snowboard extreme Series</div>
-						</div>
-						<div class="snoubord-slider__body">
-							<div class="snoubord-slider__img">
-								<img src="img/snoubord/01.png" alt="">
+							<h3 class="snoubord-card__title">Snowboard Extreme Series</h3>
+							<p class="snoubord-card__description">Professional grade snowboard for advanced riders</p>
+						</article>
+						<article class="snoubord-card">
+							<div class="snoubord-card__img">
+								<img src="img/snoubord/01.png" alt="Snowboard Pro Series - All-mountain performance" width="300" height="400" loading="lazy">
 							</div>
-							<div class="snoubord-slider__text">Snowboard extreme Series</div>
-						</div>
-						<div class="snoubord-slider__body">
-							<div class="snoubord-slider__img">
-								<img src="img/snoubord/01.png" alt="">
+							<h3 class="snoubord-card__title">Snowboard Pro Series</h3>
+							<p class="snoubord-card__description">All-mountain performance for every terrain</p>
+						</article>
+						<article class="snoubord-card">
+							<div class="snoubord-card__img">
+								<img src="img/snoubord/01.png" alt="Snowboard Freestyle Series - Perfect for tricks" width="300" height="400" loading="lazy">
 							</div>
-							<div class="snoubord-slider__text">Snowboard extreme Series</div>
-						</div>
+							<h3 class="snoubord-card__title">Snowboard Freestyle Series</h3>
+							<p class="snoubord-card__description">Perfect for tricks and park riding</p>
+						</article>
+						<article class="snoubord-card">
+							<div class="snoubord-card__img">
+								<img src="img/snoubord/01.png" alt="Snowboard Classic Series - Timeless design" width="300" height="400" loading="lazy">
+							</div>
+							<h3 class="snoubord-card__title">Snowboard Classic Series</h3>
+							<p class="snoubord-card__description">Timeless design with modern technology</p>
+						</article>
+						<article class="snoubord-card">
+							<div class="snoubord-card__img">
+								<img src="img/snoubord/01.png" alt="Snowboard Speed Series - Maximum velocity" width="300" height="400" loading="lazy">
+							</div>
+							<h3 class="snoubord-card__title">Snowboard Speed Series</h3>
+							<p class="snoubord-card__description">Maximum velocity and precision control</p>
+						</article>
+						<article class="snoubord-card">
+							<div class="snoubord-card__img">
+								<img src="img/snoubord/01.png" alt="Snowboard Adventure Series - Explore the mountains" width="300" height="400" loading="lazy">
+							</div>
+							<h3 class="snoubord-card__title">Snowboard Adventure Series</h3>
+							<p class="snoubord-card__description">Explore the mountains with confidence</p>
+						</article>
 					</div>
 				</div>
-			</div>
-			<div class="mountain">
+			</section>
+			<section class="mountain" id="company" aria-labelledby="mountain-title">
 				<div class="container">
 					<div class="mountain__body">
-						<div class="mountain__title">The Mountains
-							Snowboarding <span>®</span></div>
+						<h2 class="mountain__title" id="mountain-title">The Mountains
+							Snowboarding <span>®</span></h2>
 						<div class="mountain__text">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt auctor facilisis. Nam
 								massa dui, imperdiet et mi ut, sagittis viverra odio. Duis et lectus eu enim gravida vulputate
@@ -110,98 +147,99 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="features">
+			</section>
+			<section class="features" id="experience" aria-labelledby="features-title">
 				<div class="container">
-					<div class="features__title title">
-						<div class="title__title">Features</div>
+					<header class="features__title title">
+						<h2 class="title__title" id="features-title">Features</h2>
 						<div class="title__img">
-							<img src="img/snoubord/icon.png" alt="">
+							<img src="img/snoubord/icon.png" alt="" width="50" height="50" aria-hidden="true">
 						</div>
-					</div>
+					</header>
 					<div class="features__row">
-						<div class="features__item">
+						<article class="features__item">
 							<div class="features__img">
-								<img src="img/features/01.png" alt="">
+								<img src="img/features/01.png" alt="Born Identity: Bringing Burton Hardgoods to Life" width="300" height="200" loading="lazy">
 							</div>
-							<div class="features__text">Born Identity: Bringing Burton <br> Hardgoods to Life</div>
-						</div>
-						<div class="features__item">
+							<h3 class="features__text">Born Identity: Bringing Burton <br> Hardgoods to Life</h3>
+						</article>
+						<article class="features__item">
 							<div class="features__img">
-								<img src="img/features/02.png" alt="">
+								<img src="img/features/02.png" alt="Jeremy Jones: On That Street Grind" width="300" height="200" loading="lazy">
 							</div>
-							<div class="features__text">Jeremy Jones: On That Street <br> Grind</div>
-						</div>
-						<div class="features__item">
+							<h3 class="features__text">Jeremy Jones: On That Street <br> Grind</h3>
+						</article>
+						<article class="features__item">
 							<div class="features__img">
-								<img src="img/features/03.png" alt="">
+								<img src="img/features/03.png" alt="Burton's Tokyo Rail Days Recap" width="300" height="200" loading="lazy">
 							</div>
-							<div class="features__text">Burton’s Tokyo Rail Days <br> Recap</div>
-						</div>
-						<div class="features__item">
+							<h3 class="features__text">Burton's Tokyo Rail Days <br> Recap</h3>
+						</article>
+						<article class="features__item">
 							<div class="features__img">
-								<img src="img/features/04.png" alt="">
+								<img src="img/features/04.png" alt="Burton's Tokyo Rail Days Preview" width="300" height="200" loading="lazy">
 							</div>
-							<div class="features__text">Burton’s Tokyo Rail Days <br> Preview</div>
-						</div>
+							<h3 class="features__text">Burton's Tokyo Rail Days <br> Preview</h3>
+						</article>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="footer">
+			</section>
+		</main>
+		<footer class="footer" role="contentinfo" id="contact">
 			<div class="container">
 				<div class="footer__row">
 					<div class="footer__item">
-						<div class="footer__products">
-							<div class="footer__title">Products</div>
+						<nav class="footer__products" aria-labelledby="products-title">
+							<h3 class="footer__title" id="products-title">Products</h3>
 							<ul class="footer__list">
-								<li><a href="" class="footer__link">Mens</a></li>
-								<li><a href="" class="footer__link">Womens</a></li>
-								<li><a href="" class="footer__link">Youth</a></li>
+								<li><a href="#mens" class="footer__link">Mens</a></li>
+								<li><a href="#womens" class="footer__link">Womens</a></li>
+								<li><a href="#youth" class="footer__link">Youth</a></li>
 							</ul>
-							<div class="footer__copywrite">© 2021 Mountains Snowboards</div>
-						</div>
+							<div class="footer__copywrite">© <span id="current-year">2024</span> Mountains Snowboards</div>
+						</nav>
 					</div>
 					<div class="footer__item">
-						<div class="footer__about">
-							<div class="footer__title">About</div>
+						<nav class="footer__about" aria-labelledby="about-title">
+							<h3 class="footer__title" id="about-title">About</h3>
 							<ul class="footer__list">
-								<li><a href="" class="footer__link">Careers and Internships</a></li>
-								<li><a href="" class="footer__link">Sponsorships</a></li>
-								<li><a href="" class="footer__link">team</a></li>
-								<li><a href="" class="footer__link">Catalog Request/Download</a></li>
+								<li><a href="#careers" class="footer__link">Careers and Internships</a></li>
+								<li><a href="#sponsorships" class="footer__link">Sponsorships</a></li>
+								<li><a href="#team" class="footer__link">Team</a></li>
+								<li><a href="#catalog" class="footer__link">Catalog Request/Download</a></li>
 							</ul>
-						</div>
+						</nav>
 					</div>
 					<div class="footer__item">
-						<div class="footer__support">
-							<div class="footer__title">Customer Support</div>
+						<nav class="footer__support" aria-labelledby="support-title">
+							<h3 class="footer__title" id="support-title">Customer Support</h3>
 							<ul class="footer__list">
-								<li><a href="" class="footer__link">Contact Us</a></li>
-								<li><a href="" class="footer__link">Shipping and Order Tracking</a></li>
-								<li><a href="" class="footer__link">Easy Returns</a></li>
-								<li><a href="" class="footer__link">Warranty</a></li>
-								<li><a href="" class="footer__link">Replacement Binding Parts</a></li>
+								<li><a href="#contact" class="footer__link">Contact Us</a></li>
+								<li><a href="#shipping" class="footer__link">Shipping and Order Tracking</a></li>
+								<li><a href="#returns" class="footer__link">Easy Returns</a></li>
+								<li><a href="#warranty" class="footer__link">Warranty</a></li>
+								<li><a href="#parts" class="footer__link">Replacement Binding Parts</a></li>
 							</ul>
-						</div>
+						</nav>
 					</div>
 					<div class="footer__item">
 						<div class="footer__newslatter">
-							<div class="footer__title">Newsletter</div>
-							<div class="footer__contact">
+							<h3 class="footer__title">Newsletter</h3>
+							<form class="footer__contact" aria-label="Newsletter subscription">
 								<div class="footer__input">
-									<input type="text" placeholder="Enter your email">
+									<label for="newsletter-email" class="visually-hidden">Email address</label>
+									<input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required aria-required="true">
 								</div>
 								<div class="footer__button">
-									<button>Go</button>
+									<button type="submit" aria-label="Subscribe to newsletter">Go</button>
 								</div>
+							</form>
+							<div class="footer__img" role="img" aria-label="Social media links">
+								<img src="img/footer/social.png" alt="Follow us on social media" width="200" height="40" loading="lazy">
 							</div>
-							<div class="footer__img">
-								<img src="img/footer/social.png" alt="">
-							</div>
-							<div class="footer__region">
+							<div class="footer__region" role="button" tabindex="0" aria-label="Change region">
 								<div class="footer__flag">
-									<img src="img/footer/01.png" alt="">
+									<img src="img/footer/01.png" alt="Region flag" width="24" height="18" loading="lazy">
 								</div>
 								<div class="footer__copywrite">Change Region</div>
 							</div>
@@ -209,12 +247,31 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</footer>
 	</div>
-	</footer>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Scripts -->
 	<script src="js/script.js"></script>
+	
+	<!-- Structured Data (JSON-LD) -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Mountains Snowboarding",
+		"url": "https://mountains-snowboarding.com",
+		"logo": "https://mountains-snowboarding.com/img/header/logo.png",
+		"description": "Premium snowboards, gear, and accessories for winter sports enthusiasts",
+		"contactPoint": {
+			"@type": "ContactPoint",
+			"contactType": "Customer Service"
+		},
+		"sameAs": [
+			"https://www.facebook.com/mountainssnowboarding",
+			"https://www.instagram.com/mountainssnowboarding",
+			"https://twitter.com/mountainssnowboarding"
+		]
+	}
+	</script>
 </body>
 
 </html>
