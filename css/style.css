@@ -412,7 +412,7 @@ body.lock {
 }
 
 .hero {
-  background-image: url("../img/fullscreen/fullscreen_bg.png");
+  background-image: url("../img/fullscreen/fullscreen_bg.webp");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -1017,7 +1017,7 @@ body.lock {
 }
 
 .mountain {
-  background: url("../img/mountain/mountain_bg.png") no-repeat top center/cover fixed;
+  background: url("../img/mountain/mountain_bg.webp") no-repeat top center/cover fixed;
   position: relative;
   z-index: -2;
 }
