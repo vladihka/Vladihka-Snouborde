@@ -427,6 +427,11 @@ body.lock {
 }
 @media (max-width: 767px) {
   .hero {
+    background-attachment: scroll;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
     background-position: right center;
   }
 }

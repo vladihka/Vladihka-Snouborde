@@ -311,6 +311,10 @@ body.lock {
    min-height: 100vh;
 
    @media (max-width: $breakpoint-lg) {
+      background-attachment: scroll;
+   }
+
+   @media (max-width: $breakpoint-lg) {
       background-position: right center;
    }
    
