@@ -1,13 +1,8 @@
-/**
- * Main Stylesheet
- * Mountains Snowboarding - Premium Snowboards Website
- */
-
 @import "null.scss";
 @import "variables.scss";
 @import "mixin.scss";
 
-// Base Styles
+
 body {
    font-family: $font-family-base;
    font-size: $font-size-base;
@@ -30,7 +25,6 @@ body.lock {
    flex-direction: column;
 }
 
-// Skip Link for Accessibility
 .skip-link {
    position: absolute;
    left: -9999px;
@@ -47,7 +41,6 @@ body.lock {
    }
 }
 
-// Visually Hidden (for screen readers)
 .visually-hidden {
    position: absolute;
    width: 1px;
@@ -61,89 +54,66 @@ body.lock {
 }
 
 // Header
-.header {
-   background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(30, 41, 59, 0.95) 50%, rgba(10, 10, 10, 0.98) 100%);
+
+.header{
+
+   background: linear-gradient(135deg, rgba(10, 10, 10) 0%, rgba(30, 41, 59) 50%, rgba(10, 10, 10) 100%);
    width: 100%;
    z-index: $z-index-header;
-   min-height: 100vh;
    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-   position: relative;
-   
-   &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
-      pointer-events: none;
-   }
-   
-   &__container {
+   position: fixed;
+
+   &__body{
+
       max-width: $container-max-width-large;
       margin: 0 auto;
       padding: 0 $container-padding;
-   }
-   &__boody {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-   }
 
+   }
    &__row {
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @include adaptive_padding_top(30, 20);
-      @include adaptive_padding_bottom(30, 20);
-   }
+      height: 6rem;
 
-   &__left {
-      display: flex;
-      align-items: center;
    }
+   &__logo img{
 
-   &__logo {
-      @include adaptive_padding_right(40, 20);
-      transition: transform $transition-base;
-      
-      &:hover {
-         transform: scale(1.05);
-      }
-      
-      img {
-         filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.2));
-      }
-   }
-   &__bottom {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 auto;
-      justify-content: center;
-      background: url("../img/fullscreen/fullscreen_bg.png") no-repeat top center / cover fixed;
-   }
+      width: 100%;
+      height: 100%;
 
+   }
    &__list {
+
       display: flex;
       align-items: center;
+
       @media (max-width: 767px) {
+
          display: block;
+
       }
    }
    &__list li {
+
       @include adaptive_padding_right(30, 15);
+
       @media (max-width: 767px) {
+
          padding-right: 0px;
          @include adaptive_padding_bottom(40, 20);
+
       }
    }
    &__list li:last-child {
-      padding: 0px;
-   }
 
+      padding: 0px;
+
+   }
    &__link,
    &__price {
+
       color: $color-white;
       font-family: $font-family-semibold;
       font-size: 14px;
@@ -156,6 +126,7 @@ body.lock {
       padding: 8px 0;
       
       &::after {
+
          content: '';
          position: absolute;
          bottom: 0;
@@ -166,29 +137,31 @@ body.lock {
          background: linear-gradient(90deg, $color-accent, $color-accent-hover);
          transition: width $transition-base;
          border-radius: 2px;
+
       }
       
       &:hover,
       &:focus {
+
          color: $color-white;
          transform: translateY(-2px);
          outline: none;
          text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
          
          &::after {
+
             width: 100%;
+
          }
       }
    }
-   
-   &__link {
-      @media (max-width: $breakpoint-lg) {
-         @include adaptive_font(30, 20);
-      }
-   }
-   &__right {
+   &__info {
+
+      @include adaptive_padding_left(30, 15);
       display: flex;
+      gap: 2rem;
       align-items: center;
+
    }
 
    &__search {
@@ -238,24 +211,15 @@ body.lock {
          box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
          outline: none;
       }
-      
-      @media (max-width: $breakpoint-lg) {
-         @include adaptive_padding_right(25, 10);
-      }
    }
-
-   &__cost {
-      padding-right: 9px;
-   }
-   
-   &__burger {
-      order: 4;
-      display: none;
-      z-index: $z-index-burger;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: $spacing-sm;
+      &__burger {
+         order: 4;
+         display: none;
+         z-index: $z-index-burger;
+         background: none;
+         border: none;
+         cursor: pointer;
+         padding: $spacing-sm;
       
       @media (max-width: $breakpoint-lg) {
          display: block;
@@ -265,7 +229,7 @@ body.lock {
       }
       
       &:focus {
-         outline: 2px solid $color-white;
+         //outline: 2px solid $color-white;
          outline-offset: 2px;
       }
    }
@@ -334,6 +298,99 @@ body.lock {
       }
    }
 }
+
+.hero{   
+   
+   background-image: url("/img/fullscreen/fullscreen_bg.png");
+   background-repeat: no-repeat;
+   background-position: top center;
+   background-size: cover;
+   background-attachment: fixed;
+   display: flex;
+   align-items: center;
+   min-height: 100vh;
+
+   @media (max-width: $breakpoint-lg) {
+      background-position: right center;
+   }
+   
+   &__body {
+
+      padding: 0 $container-padding;
+      margin: 0 auto;
+      text-align: center;
+
+   }
+
+   &__title {
+
+      text-align: center;
+      color: $color-white;
+      font-family: $font-family-extrabold;
+      @include adaptive_font(80, 40);
+      @include adaptive_line_height(120, 40);
+      font-weight: 400;
+      text-transform: uppercase;
+      @include adaptive_padding_bottom(60, 30);
+      margin: 0;
+      letter-spacing: 2px;
+      animation: fadeInUp 1s ease-out;
+
+   }
+
+   &__button {
+      button,
+      .btn-primary {
+         color: $color-white;
+         font-family: $font-family-extrabold;
+         font-size: 16px;
+         font-weight: 600;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         background: linear-gradient(135deg, $color-accent 0%, $color-accent-hover 100%);
+         border: 2px solid transparent;
+         @include adaptive_width(180, 140);
+         @include adaptive_height(56, 44);
+         cursor: pointer;
+         transition: all $transition-base;
+         border-radius: $border-radius-md;
+         box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+         position: relative;
+         overflow: hidden;
+         
+         &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+         }
+         
+         &:hover,
+         &:focus {
+            color: $color-white;
+            background: linear-gradient(135deg, $color-accent-hover 0%, $color-accent 100%);
+            border-color: rgba(255, 255, 255, 0.3);
+            outline: none;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+            
+            &::before {
+               left: 100%;
+            }
+         }
+         
+         &:active {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+         }
+      }
+   }
+}
+
 // Container
 .container {
    max-width: $container-max-width;
@@ -352,13 +409,15 @@ body.lock {
    min-height: 100vh;
    
    &__body {
-      max-width: 520px;
+      //max-width: 520px;
       padding: 0 $container-padding;
       margin: 0 auto;
       text-align: center;
    }
 
    &__text {
+
+      text-align: center;
       color: $color-white;
       font-family: $font-family-extrabold;
       @include adaptive_font(80, 40);
@@ -367,9 +426,10 @@ body.lock {
       text-transform: uppercase;
       @include adaptive_padding_bottom(60, 30);
       margin: 0;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      //text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       letter-spacing: 2px;
       animation: fadeInUp 1s ease-out;
+
    }
 
    &__button {
@@ -430,15 +490,15 @@ body.lock {
    background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
    position: relative;
    
-   &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
-   }
+   // &::before {
+   //    content: '';
+   //    position: absolute;
+   //    top: 0;
+   //    left: 0;
+   //    right: 0;
+   //    height: 1px;
+   //    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+   // }
    
    &__title {
       @include adaptive_padding_top(160, 30);
@@ -529,7 +589,10 @@ body.lock {
 }
 // Snowboard Cards Grid
 .snoubord-card {
+
    display: flex;
+   align-items: center;
+   width: 100%;
    flex-direction: column;
    background: $color-white;
    border-radius: $border-radius-lg;
@@ -537,6 +600,7 @@ body.lock {
    transition: all $transition-base;
    box-shadow: $shadow-md;
    position: relative;
+   text-align: center;
    
    &::before {
       content: '';
@@ -560,54 +624,26 @@ body.lock {
          opacity: 1;
       }
       
-      .snoubord-card__img {
-         transform: scale(1.05);
-      }
-      
       .snoubord-card__title {
          color: $color-accent;
       }
    }
 
    &__img {
-      width: 100%;
-      height: 320px;
-      overflow: hidden;
-      border-radius: $border-radius-lg $border-radius-lg 0 0;
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      position: relative;
-      transition: transform $transition-slow;
       
       img {
          width: 100%;
          height: 100%;
-         object-fit: cover;
          display: block;
          transition: transform $transition-slow;
       }
       
-      &::after {
-         content: '';
-         position: absolute;
-         top: 0;
-         left: 0;
-         right: 0;
-         bottom: 0;
-         background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
-         opacity: 0;
-         transition: opacity $transition-base;
-      }
-   }
-   
-   &:hover &__img::after {
-      opacity: 1;
-   }
-   
-   &:hover &__img img {
-      transform: scale(1.1);
    }
 
+
    &__title {
+
+      flex: 1 1 auto;
       color: $color-black;
       font-family: $font-family-semibold;
       @include adaptive_font(22, 18);
@@ -620,6 +656,7 @@ body.lock {
       margin: 0;
       letter-spacing: 0.5px;
       transition: color $transition-base;
+
    }
 
    &__description {
@@ -643,6 +680,7 @@ body.lock {
 .mountain {
    background: url("../img/mountain/mountain_bg.png") no-repeat top center / cover fixed;
    position: relative;
+   z-index: -2;
    
    &::before {
       content: '';
@@ -823,6 +861,7 @@ body.lock {
 
 // Footer
 .footer {
+
    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
    @include adaptive_padding_top(70, 30);
    @include adaptive_padding_bottom(60, 25);
@@ -853,11 +892,13 @@ body.lock {
    }
    
    &__row {
+
       display: flex;
       justify-content: space-between;
       margin: 0 (-$container-padding);
       flex-wrap: wrap;
       gap: $spacing-xl;
+      padding: 0 $container-padding;
       
       @media (max-width: $breakpoint-xl) {
          justify-content: center;
@@ -865,9 +906,8 @@ body.lock {
    }
    
    &__item {
-      padding: 0 $container-padding;
-      flex: 0 1 calc(25% - #{$spacing-xl});
-      min-width: 200px;
+
+      width: auto;
       
       @media (max-width: $breakpoint-xl) {
          flex: 0 1 calc(50% - #{$spacing-xl});
@@ -878,20 +918,22 @@ body.lock {
          flex: 0 1 100%;
          padding-top: $spacing-xl;
       }
-      
-      &:first-child {
-         @media (max-width: $breakpoint-xl) {
-            order: 4;
-            padding-top: $spacing-xl;
+
+      &:last-child {
+         @media (max-width: $breakpoint-md) {
+            flex: 0 1 70%;
          }
       }
+      
    }
 
    &__products,
    &__newslatter {
+
       display: flex;
       flex-direction: column;
       height: 100%;
+
    }
 
    &__title {
@@ -951,7 +993,11 @@ body.lock {
       font-size: $font-size-medium;
       font-weight: 400;
       margin-top: auto;
-      padding-top: $spacing-lg;
+   }
+   &__rights{
+      display: flex;
+      justify-content: space-between;
+      @include adaptive_padding_top(40, 20);
    }
 
    &__contact {
@@ -1055,41 +1101,42 @@ body.lock {
       }
    }
 
-   &__img {
+   &__social {
+      display: flex;
+      justify-content: space-between;
       flex: 1 1 auto;
       @include adaptive_padding_top(60, 18);
       @include adaptive_padding_bottom(60, 18);
       transition: transform $transition-base;
       
-      &:hover {
-         transform: scale(1.05);
-      }
-      
       img {
-         width: 100%;
+
+         width: 30px;
          height: auto;
          display: block;
-         max-width: 200px;
          margin: 0 auto;
          filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.2));
-         transition: filter $transition-base;
+         transition: all $transition-base;
+
+         &:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.4));
       }
-      
-      &:hover img {
-         filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.4));
+
       }
    }
 
    &__region {
+
       display: flex;
       align-items: center;
       cursor: pointer;
-      transition: opacity $transition-base;
+      transition: all $transition-base;
       
       &:hover,
       &:focus {
          opacity: 0.7;
-         outline: 2px solid $color-white;
+         //outline: 2px solid $color-white;
          outline-offset: 2px;
       }
       

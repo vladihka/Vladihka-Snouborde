@@ -5,8 +5,8 @@ $(document).ready(function () {
    });
 });
 
-$(document).ready(function () {
-   $(".snoubords__burger").click(function (event) {
-      $(".snoubords__burger").toggleClass('active');
-   });
-});
+// $(document).ready(function () {
+//    $(".snoubords__burger").click(function (event) {
+//       $(".snoubords__burger").toggleClass('active');
+//    });
+// });

@@ -13,7 +13,7 @@
 	<meta name="author" content="Mountains Snowboarding">
 	<meta name="robots" content="index, follow">
 	
-	<link rel="icon" type="image/png" href="img/header/logo.png">
+	<link rel="icon" type="image/png" href="img/header/logo.webp">
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -23,105 +23,92 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__boody">
-				<div class="header__top">
-					<div class="header__container">
-						<div class="header__row">
-							<div class="header__left">
-								<div class="header__logo">
-									<a href="#home" aria-label="Mountains Snowboarding Home">
-										<img src="img/header/logo.png" alt="Mountains Snowboarding Logo" width="120" height="40" loading="eager">
-									</a>
-								</div>
-								<nav class="header__menu" role="navigation" aria-label="Main navigation">
-									<ul class="header__list">
-										<li><a href="#shop" class="header__link">SHOP</a></li>
-										<li><a href="#team" class="header__link">TEAM</a></li>
-										<li><a href="#events" class="header__link">EVENTS</a></li>
-										<li><a href="#experience" class="header__link">EXPERIENCE</a></li>
-										<li><a href="#company" class="header__link">COMPANY</a></li>
-										<li><a href="#contact" class="header__link">Contact</a></li>
-									</ul>
-								</nav>
-							</div>
-							<div class="header__right">
-								<button class="header__search" type="button" aria-label="Search" aria-expanded="false">
-									<img src="img/header/search1.png" alt="" width="20" height="20" aria-hidden="true">
-								</button>
-								<div class="header__shop" role="button" tabindex="0" aria-label="Shopping cart">
-									<div class="header__cost">
-										<img src="img/header/shop.png" alt="" width="20" height="20" aria-hidden="true">
-									</div>
-									<div class="header__price" aria-live="polite">€0</div>
-								</div>
-								<button class="header__burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">
-									<span aria-hidden="true"></span>
-								</button>
-							</div>
+			<div class="header__body">
+				<div class="header__row">
+					<a class="header__logo" href="/">
+						<img src="img/header/logo.webp" alt="Mountains Snowboarding Logo" width="120" height="40" loading="eager">
+					</a>
+				<nav class="header__menu" role="navigation" aria-label="Main navigation">
+					<ul class="header__list">
+						<li><a href="#shop" class="header__link">SHOP</a></li>
+						<li><a href="#team" class="header__link">TEAM</a></li>
+						<li><a href="#events" class="header__link">EVENTS</a></li>
+						<li><a href="#experience" class="header__link">EXPERIENCE</a></li>
+						<li><a href="#company" class="header__link">COMPANY</a></li>
+						<li><a href="#contact" class="header__link">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="header__info">
+					<button class="header__search" type="button" aria-label="Search" aria-expanded="false">
+						<img src="img/header/search-outline-svgrepo-com.svg" alt="" width="20" height="20" aria-hidden="true">
+					</button>
+					<div class="header__shop" role="button" tabindex="0" aria-label="Shopping cart">
+						<div class="header__cost">
+							<img src="img/header/shop-svgrepo-com.svg" alt="" width="20" height="20" aria-hidden="true">
 						</div>
+						<div class="header__price" aria-live="polite">€0</div>
 					</div>
+					<button class="header__burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">
+						<span aria-hidden="true"></span>
+					</button>
 				</div>
-				<div class="header__bottom">
-					<section class="fullscreen" id="home">
-						<div class="fullscreen__body">
-							<h1 class="fullscreen__text">Run Over Everything</h1>
-							<div class="fullscreen__button">
-								<button type="button" class="btn-primary" aria-label="See snowboard details">See Details</button>
-							</div>
-						</div>
-					</section>
 				</div>
 			</div>
 		</header>
 		<main class="content" role="main">
+			<section class="hero">
+				<div class="hero__body">
+					<h1 class="hero__title">Run Over Everything</h1>
+					<div class="hero__button">
+						<button type="button" class="btn-primary" aria-label="See snowboard details">See Details</button>
+					</div>
+				</div>
+			</section>
 			<section class="snoubords" id="shop" aria-labelledby="snowboards-title">
 				<div class="container">
 					<header class="snoubords__title title">
 						<h2 class="title__title" id="snowboards-title">snowboards</h2>
 						<p class="title__text">Aliquam erat volutpat. Curabitur ut consequat arcu eget laoreet est</p>
-						<div class="title__img">
-							<img src="img/snoubord/icon.png" alt="" width="50" height="50" aria-hidden="true">
-						</div>
 					</header>
 					<div class="snoubords__grid" role="region" aria-label="Snowboards collection">
 						<article class="snoubord-card">
 							<div class="snoubord-card__img">
-								<img src="img/snoubord/01.png" alt="Snowboard Extreme Series - Professional grade snowboard" width="300" height="400" loading="lazy">
+								<img src="img/snoubord/01-removebg-preview.webp" alt="Snowboard Extreme Series - Professional grade snowboard" width="300" height="400" loading="lazy">
 							</div>
 							<h3 class="snoubord-card__title">Snowboard Extreme Series</h3>
 							<p class="snoubord-card__description">Professional grade snowboard for advanced riders</p>
 						</article>
 						<article class="snoubord-card">
 							<div class="snoubord-card__img">
-								<img src="img/snoubord/01.png" alt="Snowboard Pro Series - All-mountain performance" width="300" height="400" loading="lazy">
+								<img src="img/snoubord/01-removebg-preview.webp" alt="Snowboard Pro Series - All-mountain performance" width="300" height="400" loading="lazy">
 							</div>
 							<h3 class="snoubord-card__title">Snowboard Pro Series</h3>
 							<p class="snoubord-card__description">All-mountain performance for every terrain</p>
 						</article>
 						<article class="snoubord-card">
 							<div class="snoubord-card__img">
-								<img src="img/snoubord/01.png" alt="Snowboard Freestyle Series - Perfect for tricks" width="300" height="400" loading="lazy">
+								<img src="img/snoubord/01-removebg-preview.webp" alt="Snowboard Freestyle Series - Perfect for tricks" width="300" height="400" loading="lazy">
 							</div>
 							<h3 class="snoubord-card__title">Snowboard Freestyle Series</h3>
 							<p class="snoubord-card__description">Perfect for tricks and park riding</p>
 						</article>
 						<article class="snoubord-card">
 							<div class="snoubord-card__img">
-								<img src="img/snoubord/01.png" alt="Snowboard Classic Series - Timeless design" width="300" height="400" loading="lazy">
+								<img src="img/snoubord/01-removebg-preview.webp" alt="Snowboard Classic Series - Timeless design" width="300" height="400" loading="lazy">
 							</div>
 							<h3 class="snoubord-card__title">Snowboard Classic Series</h3>
 							<p class="snoubord-card__description">Timeless design with modern technology</p>
 						</article>
 						<article class="snoubord-card">
 							<div class="snoubord-card__img">
-								<img src="img/snoubord/01.png" alt="Snowboard Speed Series - Maximum velocity" width="300" height="400" loading="lazy">
+								<img src="img/snoubord/01-removebg-preview.webp" alt="Snowboard Speed Series - Maximum velocity" width="300" height="400" loading="lazy">
 							</div>
 							<h3 class="snoubord-card__title">Snowboard Speed Series</h3>
 							<p class="snoubord-card__description">Maximum velocity and precision control</p>
 						</article>
 						<article class="snoubord-card">
 							<div class="snoubord-card__img">
-								<img src="img/snoubord/01.png" alt="Snowboard Adventure Series - Explore the mountains" width="300" height="400" loading="lazy">
+								<img src="img/snoubord/01-removebg-preview.webp" alt="Snowboard Adventure Series - Explore the mountains" width="300" height="400" loading="lazy">
 							</div>
 							<h3 class="snoubord-card__title">Snowboard Adventure Series</h3>
 							<p class="snoubord-card__description">Explore the mountains with confidence</p>
@@ -152,9 +139,6 @@
 				<div class="container">
 					<header class="features__title title">
 						<h2 class="title__title" id="features-title">Features</h2>
-						<div class="title__img">
-							<img src="img/snoubord/icon.png" alt="" width="50" height="50" aria-hidden="true">
-						</div>
 					</header>
 					<div class="features__row">
 						<article class="features__item">
@@ -196,7 +180,7 @@
 								<li><a href="#womens" class="footer__link">Womens</a></li>
 								<li><a href="#youth" class="footer__link">Youth</a></li>
 							</ul>
-							<div class="footer__copywrite">© <span id="current-year">2024</span> Mountains Snowboards</div>
+							
 						</nav>
 					</div>
 					<div class="footer__item">
@@ -234,44 +218,30 @@
 									<button type="submit" aria-label="Subscribe to newsletter">Go</button>
 								</div>
 							</form>
-							<div class="footer__img" role="img" aria-label="Social media links">
-								<img src="img/footer/social.png" alt="Follow us on social media" width="200" height="40" loading="lazy">
-							</div>
-							<div class="footer__region" role="button" tabindex="0" aria-label="Change region">
-								<div class="footer__flag">
-									<img src="img/footer/01.png" alt="Region flag" width="24" height="18" loading="lazy">
-								</div>
-								<div class="footer__copywrite">Change Region</div>
-							</div>
+							<ul class="footer__social" role="img" aria-label="Social media links">
+								<li><a href="#"><img src="img/footer/facebook-176-svgrepo-com.svg" alt=""></a></li>
+								<li><a href="#"><img src="img/footer/instagram-svgrepo-com.svg" alt=""></a></li>
+								<li><a href="#"><img src="img/footer/twitter-154-svgrepo-com.svg" alt=""></a></li>
+								<li><a href="#"><img src="img/footer/youtube-svgrepo-com.svg" alt=""></a></li>
+								<li><a href="#"><img src="img/footer/pinterest-svgrepo-com.svg" alt=""></a></li>
+							</ul>
 						</div>
+					</div>
+				</div>
+				<div class="footer__rights">
+					<div class="footer__copywrite">© <span id="current-year">2026</span> Mountains Snowboards</div>
+					<div class="footer__region" role="button" tabindex="0" aria-label="Change region">
+						<div class="footer__flag">
+							<img src="img/footer/01.png" alt="Region flag" width="24" height="18" loading="lazy">
+						</div>
+						<div class="footer__copywrite">Change Region</div>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<!-- Scripts -->
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script.js"></script>
-	
-	<!-- Structured Data (JSON-LD) -->
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Organization",
-		"name": "Mountains Snowboarding",
-		"url": "https://mountains-snowboarding.com",
-		"logo": "https://mountains-snowboarding.com/img/header/logo.png",
-		"description": "Premium snowboards, gear, and accessories for winter sports enthusiasts",
-		"contactPoint": {
-			"@type": "ContactPoint",
-			"contactType": "Customer Service"
-		},
-		"sameAs": [
-			"https://www.facebook.com/mountainssnowboarding",
-			"https://www.instagram.com/mountainssnowboarding",
-			"https://twitter.com/mountainssnowboarding"
-		]
-	}
-	</script>
 </body>
 
 </html>
